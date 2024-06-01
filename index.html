@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+    
     <!-- nav-bar -->
     <section class="nav-bar-section">
     <nav>
@@ -14,14 +18,17 @@
             <a href="" class="company-logo">
                 <img src="company_logo.jpg" alt="malak-logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links " id="nav-links">
                 <ul class="flex">
-                    <li><a href="#" class="hover-links">HOME</a></li>
-                    <li><a href="#aboutus" class="hover-links">ABOUT US</a></li>
-                    <li><a href="#product" class="hover-links">PRODUCTS</a></li>
-                    <li><a href="#contact" class="hover-links">CONTACT US</a></li>
+                    <li><a href="#" class="hover-links link-color ">HOME</a></li>
+                    <li><a href="#aboutus"  class="hover-links link-color ">ABOUT US</a></li>
+                    <li><a href="#product" class="hover-links  link-color">PRODUCTS</a></li>
+                    <li><a href="#contact" class="hover-links  link-color">CONTACT US</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-links" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
 </section>
@@ -33,7 +40,7 @@
                 <h1>PROVIDING SPECIALIZED CHEMICALS FOR INDUSTRIAL AND CONSTRUCTION FIELDS</h1>
                 <a href="#" class="primary-button get-quota-btn">Get A Quota</a>
             </div>
-            <div class="header-right">
+            <div class="header-right" id="chemical-banner-img">
                 <img src="images/chemical_banner.png" alt="compnay_banner">
 
             
@@ -49,11 +56,11 @@
     <header>
         <div class="container about-section flex">
             
-            <div class="header-right">
+            <div class="about-right">
                 <img src="images/about_banner.png" alt="compnay_banner">
             </div>
 
-            <div class="header-left">
+            <div class="about-left">
                 <h2 class="container">About Us</h2>
                 <p>Welcome to Malak International LLC FZ. We are into distribution of Chemicals 
                     used in a range of application such as Pharmaceutical, Industrial, Paintings, 
@@ -235,15 +242,15 @@
 
  <section class="contact " id="contact">
  <h2 class="container">Contact US</h2>
-    <div class="container flex product-container">
+    <div class="container flex conatct-container">
 
-        <div class="product-column flex conatct-container">
+        <div class="conatct-column flex conatct-container">
             <p>Email: viji@malak-international.com / info@malak-international.com</p>
             <p>Office: +97142686200 Mobile: +971508812104</p>
             <p>Website : www.malak-international.com</p>
             </div>
 
-        <div class="product-column flex conatct-container">
+        <div class="conatct-column flex conatct-container">
             <p>Malak International LLC FZ</p>
             <p >209C, Al Nakheel Building, Zabeel Street, </p>
             <p>Karama, Dubai, UAE </p>
@@ -253,9 +260,42 @@
 
 </section>
 
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.remove('active');
+});
+    const toggleButton = document.getElementById('nav-toggle');
+    const navLInks = document.getElementById('nav-links');
+    const chemicalbannerimg = document.getElementById('chemical-banner-img');
+    toggleButton.addEventListener('click',() =>{
+        navLInks.classList.toggle('active');
+    } );
 
+
+    
+    // toggleButton.addEventListener('click',() =>{
+    //     chemicalbannerimg.style.marginTop='240px';
+    // } );
+
+//     const navListItems = document.querySelectorAll('nav-links ul li a');
+// navListItems.forEach(item => {
+//     item.addEventListener('click', () => {
+//         if (window.innerWidth <= 992) {
+//             navLinks.classList.remove('active');
+//         }
+//     });
+// });
+
+
+    
+
+
+</script>
 
 </body>
 </html>
