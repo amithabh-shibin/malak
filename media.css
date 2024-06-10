@@ -82,15 +82,15 @@
     }
 
 
-    /* .conatct-container {
+    .conatct-container {
         flex-direction: column;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between; /* To create even spacing between columns */
-    /* } */
-    /* .contact-column p {
+}
+.contact-column p {
         font-size: 10px;
-    }    */ */
+}   
 
  /* feature */
         .features {
