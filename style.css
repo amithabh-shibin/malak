@@ -280,6 +280,9 @@ header h1:hover{
 .onlycontact{
     margin-top: 100px;
     text-align: center;
+    align-items: flex-start;
+    justify-content: space-between;
+
 }
 .onlycontact h2{
     margin-top: 200px;
